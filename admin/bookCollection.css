@@ -1,0 +1,144 @@
+* {
+    padding: 0px;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Poppins, Abril Fatface;
+    position: relative;
+    background-size: cover;
+    background-image: url("BG.jpg");
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    background: #ff7500;
+}
+
+nav ul {
+    float: right;
+    margin-right: 30px;
+    margin-top: 35px;
+    display: flex;
+    gap: 30px;
+}
+    
+.logo {
+    position: absolute;
+    height: 19px;
+    left: 49px;
+    top: 40px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.login {
+    font-weight: 700;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 20px;
+    padding: 7px 25px;
+}
+
+a.active, a:hover {
+    color: white;
+}
+
+nav a:hover {
+    color: #124439;
+    transform: scale(1.1);
+}
+
+.table-container {
+    margin: 20px auto; /* Center the container */
+    max-width: 80%; /* Ensure table is not too wide */
+    overflow-x: auto; /* Horizontal scrolling for large tables */
+    background-color: white; /* Set background color */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Collapse borders for better visual */
+    color: #333; /* Text color inside the table */
+    text-align: center; /* Center align text in table */
+    margin: 0 auto; /* Center align table */
+}
+
+th, td {
+    padding: 10px; /* Padding for table cells */
+    border: 1px solid #ddd; /* Light border for table cells */
+}
+
+th {
+    border-radius: 4px;
+    background-color: #F4A261;
+    color: white; /* Text color in header */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+.search-sort {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Increase margin for separation */
+    text-align: center; /* Center align search and sort options */
+}
+
+.search-sort form {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.search-sort label {
+    margin-right: 15px;
+}
+
+.search-sort input[type="text"],
+.search-sort select {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.search-sort input[type="submit"] {
+    padding: 5px 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-sort input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Add scrollbar to the table container */
+.table-container {
+    max-height: 400px; /* Adjust the height as needed */
+    overflow-y: auto;
+    background-color: white; /* Set background color */
+}
+
+.success-message {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: green; /* Text color */
+    background-color: #d4edda; /* Light green background */
+    border: 1px solid #c3e6cb; /* Border color */
+}

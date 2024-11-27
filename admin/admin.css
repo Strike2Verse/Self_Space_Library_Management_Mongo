@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Poppins, Abril Fatface;
+    background-size: cover;   
+    background-image: url("BG.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    background: #ff7500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    float: right;
+    margin-right: 30px;
+    margin-top: 35px;
+    display: flex;  
+}
+
+.logo {
+    position: absolute;
+    height: 19px;
+    left: 49px;
+    top: 40px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 20px;
+    padding: 7px 30px;
+}
+
+nav a:hover {
+    color: #124439;
+    transform: scale(1.1);
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    width: 600px;
+    text-align: center;
+    color: white;
+    margin-top: 120px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+}
+
+.textpara {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 17px;
+    color: #FFFFFF;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.formco, .delbook {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pdf-upload {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.addbutton, .delbutton, .seebutton {
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 11px 12px;
+    border-radius: 6px;
+    border-color: transparent;
+    background: #04627a77;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.addbutton:hover, .delbutton:hover, .seebutton:hover {
+    background: white;
+    color: #05566A;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.floating-book {
+    position: fixed;
+    width: 250px;
+    height: 200px;
+    background: url('book.png') no-repeat center center;
+    background-size: cover;
+    animation: float 2s ease-in-out infinite;
+    z-index: 9999;
+    transition: transform 0.3s ease;
+}
+
+.left {
+    left: 160px;
+    bottom: 35%;
+    animation: floatRotateLeft 3s ease-in-out infinite;
+}
+
+.right {
+    right: 100px;
+    bottom: 35%;
+    animation: floatRotateRight 3s ease-in-out infinite;
+}
+
+@keyframes floatRotateLeft {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+    50% {
+        transform: translateY(-15px) rotate(-5deg) scale(1.1);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+}
+
+@keyframes floatRotateRight {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+    50% {
+        transform: translateY(-15px) rotate(5deg) scale(1.1);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+}
+
+@keyframes floatForm {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

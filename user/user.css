@@ -1,0 +1,211 @@
+* {
+    padding: 0px;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Poppins, Abril Fatface;
+    position: relative;
+    background-size: cover;
+    background-image: url("BG.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh; 
+    margin: 0; 
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    background: #FF8C42;
+    margin: 0; 
+    border-bottom: none; 
+    box-shadow: none; 
+}
+
+nav ul {
+    float: right;
+    margin-right: 30px;
+    margin-top: 35px;
+    display: flex;
+}
+
+nav a:hover {
+    color: #124439;
+    transform: scale(1.1);
+}
+
+.logo {
+    position: absolute;
+    height: 19px;
+    left: 49px;
+    top: 40px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    color: #f1f1f1;
+    font-size: 20px;
+    padding: 7px 30px;
+}
+
+a.active, a:hover {
+    color: white;
+}
+
+.table-container {
+    margin: 50px auto;
+    width: 80%;
+    padding: 20px;
+    background-color: transparent; 
+    box-shadow: none;
+    border: none; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.message, .error-message {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.message {
+    color: green;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.error-message {
+    color: red;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.container3 {
+    color: white;
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 165px;
+    top: 643px;
+}
+
+.seebutton {
+    width: 500px;
+    padding: 12px 20px;
+    display: inline-block;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-weight: 600;
+    background: #04627a77;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seebutton.active, .seebutton:hover {
+    color: #05566A;
+    background: white;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+button[type="submit"] {
+    background: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #d62839;
+    transform: scale(1.05);
+}
+
+button[type="submit"]:active {
+    background: #c8102e;
+    transform: scale(0.95);
+}
+
+.message {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.message.success {
+    background-color: #4CAF50; 
+}
+
+.message.error {
+    background-color: #f44336; 
+}
+
+.message.no-books {
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background: rgba(20, 18, 18, 0.9);
+    border: 2px solid #ff4400;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    animation: float 1s ease-in-out infinite; 
+    width: 80%;
+    max-width: 500px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%) translateY(0); 
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-10px); 
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(0); 
+    }
+}

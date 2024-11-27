@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBRARY</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+   
+    <div class="floating-book left"></div>
+    <div class="floating-book right"></div>
+
+    <nav>
+        <label class="logo">LIBRARY</label>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Home.php">Books</a></li>
+            <li class="login"><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="textpara">
+        <p>Registration</p>
+    </div>
+
+    <div class="container">
+        <form action="registration.php" method="post" onsubmit="return validateForm()">
+            <input type="email" class="formco2" placeholder="Email Address" name="email" required 
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                   title="Please enter a valid email address (e.g., name@example.com)">
+            <div style="position: relative;">
+                <input type="password" class="formco3" placeholder="Password" name="password" required 
+                       onfocus="showPasswordMessage()" onblur="hidePasswordMessage()">
+                <div id="passwordMessage" class="password-message">Password must be at least 8 characters, include uppercase, lowercase, a number, and a special character.</div>
+            </div> 
+            <input type="password" class="formco4" placeholder="Confirm Password" name="confirm_password" required>
+            <input type="text" class="formco1" placeholder="Username" name="username" required>
+
+          
+            <input type="text" class="formco5" placeholder="Phone Number" name="phone_number" required
+                   pattern="[0-9]{10,15}" 
+                   title="Please enter a valid phone number (10-15 digits)">
+
+          
+            <label for="role">Role:</label>
+            <select id="role" name="role" required>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            <button class="register-button" type="submit">Register</button>
+        </form>
+
+        
+        <div class="social-login">
+            <p>Or register/login with:</p>
+            <a href="#" class="social-login-btn google">Login with Google</a>
+            <a href="#" class="social-login-btn twitter">Login with Twitter</a>
+            <a href="#" class="social-login-btn github">Login with GitHub</a>
+        </div>
+    </div>
+
+    <script>
+        function showPasswordMessage() {
+            document.getElementById('passwordMessage').classList.add('show');
+        }
+
+        function hidePasswordMessage() {
+            document.getElementById('passwordMessage').classList.remove('show');
+        }
+
+        function validateForm() {
+            const emailInput = document.querySelector('input[name="email"]');
+            const passwordInput = document.querySelector('input[name="password"]');
+            const confirmPasswordInput = document.querySelector('input[name="confirm_password"]');
+            const phoneInput = document.querySelector('input[name="phone_number"]');
+        
+            const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+            const phonePattern = /^[0-9]{10,15}$/;
+        
+           
+            if (!emailPattern.test(emailInput.value)) {
+                alert("Please enter a valid email address.");
+                emailInput.focus();
+                return false;
+            }
+        
+            
+            if (!phonePattern.test(phoneInput.value)) {
+                alert("Please enter a valid phone number (10-15 digits).");
+                phoneInput.focus();
+                return false;
+            }
+        
+            
+            const password = passwordInput.value;
+        
+            
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                passwordInput.focus();
+                return false;
+            }
+        
+        
+            if (!/[A-Z]/.test(password)) {
+                alert("Password must contain at least one uppercase letter.");
+                passwordInput.focus();
+                return false;
+            }
+        
+            
+            if (!/[a-z]/.test(password)) {
+                alert("Password must contain at least one lowercase letter.");
+                passwordInput.focus();
+                return false;
+            }
+        
+            
+            if (!/[0-9]/.test(password)) {
+                alert("Password must contain at least one number.");
+                passwordInput.focus();
+                return false;
+            }
+        
+            
+            if (!/[^A-Za-z0-9]/.test(password)) {
+                alert("Password must contain at least one special character.");
+                passwordInput.focus();
+                return false;
+            }
+        
+            
+            if (password !== confirmPasswordInput.value) {
+                alert("Passwords do not match.");
+                confirmPasswordInput.focus();
+                return false;
+            }
+        
+        
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Poppins, Abril Fatface;
+    background-size: cover;   
+    background-image: url("BG.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    background: #ff7500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    float: right;
+    margin-right: 30px;
+    margin-top: 35px;
+    display: flex;  
+}
+
+.logo {
+    position: absolute;
+    height: 19px;
+    left: 49px;
+    top: 40px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 20px;
+    padding: 7px 30px;
+}
+
+nav a:hover {
+    color: #124439;
+    transform: scale(1.1);
+}
+
+.blurrct{
+    box-sizing: border-box;
+    position: absolute;
+    width: 600px;
+    height: 200px;
+    left: 50%; /* Center horizontally */
+    top: 300px;
+    transform: translateX(-50%); /* Adjust to center */
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(30px); 
+    border-radius: 16px;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+
+h3{
+  
+    top: 300px;
+    left: 60px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    
+    color: #17FF7B;
+}
+
+p{
+  
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    
+    color: white;
+}
+
+.msg{
+    position: absolute;
+    margin-top: 270px;
+    left: 580px;
+    top: 150px;
+    z-index: 9;
+}
+
+.icon{
+
+    position: absolute;
+    width: 50px;
+    margin-top: 250px;
+    left: 750px;
+    top: 85px;
+    z-index: 9;
+}
+
+.back{
+    position: absolute;
+    top: 515px;
+    left: 730px;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    color: #FFFFFF;
+    width: auto;
+    padding: 12px 20px;
+    display: inline-block;
+    border-radius: 6px;
+    border-color: transparent;
+    background: #04627a77;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.back.active,.back:hover{
+    color: #ffffff;
+    background: white;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+
+}
+

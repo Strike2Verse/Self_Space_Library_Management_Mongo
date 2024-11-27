@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBRARY</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+    <nav>
+        <label class="logo">LIBRARY</label>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Home.php">Books</a></li>
+            <li class="registration"><a href="registration.html">Register</a></li>
+            <li class="login"><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <div class="form-box">
+            <div class="textpara">
+                <p>Welcome back</p>
+            </div>
+            <div class="textparaline">
+                <p>Welcome back! Please enter your details</p>
+            </div>
+            <form name="loginForm" action="login.php" method="post">
+                <div class="container">
+                    <label class="label" for="username">Username</label>
+                    <input type="text" placeholder="Enter Username" name="username" required>
+                    <label class="label" for="password">Password</label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+                </div>
+               
+                <div class="invalid-credential" id="error-message">
+                    Invalid credentials. Please try again.
+                </div>
+                <button class="button button1" type="submit">Sign in</button>
+                <button class="button button2" type="button" onclick="backToHome()">Back to Home</button>
+                <div class="forgot-password">
+                    <a href="forgot_password.html">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function displayErrorMessage() {
+            const params = new URLSearchParams(window.location.search);
+            const error = params.get('error');
+
+            if (error === 'invalid_credentials') {
+                const errorMessage = document.getElementById('error-message');
+                errorMessage.style.display = 'block';
+
+                setTimeout(() => {
+                    errorMessage.style.display = 'none';
+                }, 5000); 
+
+                const newUrl = window.location.origin + window.location.pathname;
+                window.history.replaceState({}, document.title, newUrl);
+            }
+        }
+
+        window.onload = displayErrorMessage;
+
+        function backToHome() {
+            window.location.href = "Home.html";
+        }
+    </script>
+</body>
+</html>

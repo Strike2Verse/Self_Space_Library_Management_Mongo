@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBRARY</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <nav>
+        <label class="logo">LIBRARY</label> 
+        <ul>
+            <li class="home"><a href="Home.html">Home</a></li>
+            <li><a href="Home.php">Books</a></li>
+            <li><a href="registration.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="overlay">
+            <div class="quote-box">
+                <p class="secondary-quote">"Libraries store the energy that fuels the imagination. They open up windows to the world and inspire us to explore new ideas and new possibilities."</p>
+                <p class="author2">- Sidney Sheldon</p>
+                
+                <p class="secondary-quote">"A library is not a luxury but one of the necessities of life."</p>
+                <p class="author2">- Henry Ward Beecher</p>
+            </div>
+            <div class="button-group">
+                <button class="button button1" onClick="mydisplay()">Check available books</button>
+                <button class="button button2" onClick="mylogin()">Log in</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mylogin() {
+            window.location.href = "login.html";
+        }
+        function mydisplay() {
+            window.location.href = "Home.php";
+        }
+    </script>
+</body>
+</html>

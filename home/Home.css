@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Poppins', 'Abril Fatface';
+    background-image: url('BG.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: #ff7500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    z-index: 1;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #f1f1f1;
+    font-size: 20px;
+    padding: 7px 20px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav a:hover {
+    color: #124439;
+    transform: scale(1.1);
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 50px;
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeInUp 1s forwards;
+    opacity: 0;
+    margin-top: 100px;
+}
+
+.quote-box {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.quote-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.main-quote {
+    font-family: 'Abril Fatface';
+    color: #FFFAFA;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9); 
+}
+
+.author, .author2 {
+    color: #8a8044;
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+
+.secondary-quote {
+    color: #FFD700;
+    font-size: 35px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.7);
+}
+
+.button-group {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 20px;
+    animation: fadeInUp 2s forwards;
+    opacity: 0;
+}
+
+.button {
+    font-family: Poppins;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.button1 {
+    background: #ff4400;
+}
+
+.button2 {
+    background: rgba(4, 98, 122, 0.392);
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floatBooks {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: floatBooks 5s ease-in-out infinite;
+}
